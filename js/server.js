@@ -217,9 +217,6 @@ function makeMove() {
 
     // Update the number of wins in Firebase
     rootRef.child("wins/" + uberGridWinner).set(wins[uberGridWinner]);
-
-    // Append the current game to the games history
-    rootRef.child("history").push(currentGame);     // TODO: only send data that is needed (e.g. no need for timestamp or previous move)
   }
 
   // Otherwise, if there is no winner, set the next move to be made in five seconds
